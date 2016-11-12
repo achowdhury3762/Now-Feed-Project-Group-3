@@ -11,7 +11,6 @@ import java.util.List;
  * Created by ashiquechowdhury on 10/30/16.
  */
 public class myAdapter extends RecyclerView.Adapter {
-    private final static int NUMBER = 1, TEXT = 2;
     List<Object> myList;
 
     public myAdapter(List aList){
@@ -31,6 +30,10 @@ public class myAdapter extends RecyclerView.Adapter {
             childView = inflater.inflate(R.layout.integer_layout, parent,false);
             return new textViewHolder(childView);
         }
+        else if(viewType ==3){
+            childView = inflater.inflate(R.layout.workout, parent,false);
+            return new textViewHolder(childView);
+        }
         return null;
     }
 
@@ -46,6 +49,9 @@ public class myAdapter extends RecyclerView.Adapter {
         }
         if(myList.get(position) instanceof Integer){
             return 2;
+        }
+        if(myList.get(position) instanceof Abs){
+            return 3;
         }
         return 0;
     }

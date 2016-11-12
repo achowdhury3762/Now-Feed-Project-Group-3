@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void populateNameList(){
         nameList = new ArrayList<>();
-        nameList.add("Ashique");
+        nameList.add(new Abs());
         nameList.add(12);
         nameList.add("Ridita");
         nameList.add("Helen");
