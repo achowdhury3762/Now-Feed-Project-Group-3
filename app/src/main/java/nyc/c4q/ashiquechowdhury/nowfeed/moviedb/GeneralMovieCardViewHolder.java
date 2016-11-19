@@ -31,7 +31,7 @@ public class GeneralMovieCardViewHolder extends RecyclerView.ViewHolder{
         String year = movie.getRelease_date().substring(0,4);
         String movieTitle = movie.getTitle();
         movieTitleView.setText(movieTitle);
-        yearOfMovie.setText(" " + year + " Popular Hit");
+        yearOfMovie.setText( year + " Movie Popular Hit");
         Picasso.with(itemView.getContext()).load("http://image.tmdb.org/t/p/w300" + movie.getPoster_path()).fit().into(movieImage);
         itemView.setOnClickListener(movieClickListener(year));
     }
