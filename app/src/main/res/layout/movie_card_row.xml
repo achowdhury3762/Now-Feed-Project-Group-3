@@ -22,19 +22,22 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/movie_imageView"
                 android:background="@drawable/myborder"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 android:text="2011 Movie Popular Hits"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:fontFamily="cursive"/>
 
             <TextView
                 android:id="@+id/movie_row_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="9dp"
+                android:gravity="center"
+                android:layout_below="@id/movie_year_textView"
                 android:layout_toEndOf="@+id/movie_imageView"
-                android:text="Aerial Platform Operations"
+                android:text="Heart"
                 android:textSize="20sp"
                 android:textStyle="italic" />
         </RelativeLayout>
