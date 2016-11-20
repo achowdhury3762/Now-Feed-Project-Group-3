@@ -8,15 +8,19 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import nyc.c4q.ashiquechowdhury.nowfeed.buzzfeed.GeneralBuzzViewHolder;
+import nyc.c4q.ashiquechowdhury.nowfeed.color.GeneralColorCardViewHolder;
 import nyc.c4q.ashiquechowdhury.nowfeed.moviedb.GeneralMovieCardViewHolder;
 import nyc.c4q.ashiquechowdhury.nowfeed.moviedb.network.Movie;
+import nyc.c4q.ashiquechowdhury.nowfeed.workout.GeneralAbsViewHolder;
 
 /**
  * Created by ashiquechowdhury on 11/14/16.
  */
 public class GeneralAdapter extends RecyclerView.Adapter {
     private static final int MOVIE = 1;
+    private static final int COLOR = 3;
     private static final int BUZZ = 2;
+    private static final int ABS = 4;
 
     List<Object> myCards;
 
@@ -35,8 +39,14 @@ public class GeneralAdapter extends RecyclerView.Adapter {
             childView = inflater.inflate(R.layout.movie_card_row, parent, false);
             return new GeneralMovieCardViewHolder(childView);
         }
-        childView = inflater.inflate(R.layout.movie_card_row, parent, false);
-        return new GeneralBuzzViewHolder(childView);
+        else if(viewType == COLOR){
+            childView = inflater.inflate(R.layout.color_card_row, parent, false);
+            return new GeneralColorCardViewHolder(childView);
+        }
+        else {
+            childView = inflater.inflate(R.layout.abs_card_row, parent, false);
+            return new GeneralAbsViewHolder(childView);
+        }
     }
 
 
@@ -49,6 +59,11 @@ public class GeneralAdapter extends RecyclerView.Adapter {
             case MOVIE:
                 ((GeneralMovieCardViewHolder) holder).bind((Movie) myCards.get(position % (myCards.size())));
                 break;
+            case COLOR:
+                ((GeneralColorCardViewHolder) holder).bind();
+                break;
+            case ABS:
+                ((GeneralAbsViewHolder) holder).bind();
         }
     }
 
@@ -63,8 +78,10 @@ public class GeneralAdapter extends RecyclerView.Adapter {
             return MOVIE;
         } else if (myCards.get(position % (myCards.size())) instanceof String) {
             return BUZZ;
+        } else if (myCards.get(position % (myCards.size())) instanceof Integer) {
+            return COLOR;
         }
-        return -1;
+        else
+            return ABS;
     }
-
 }
