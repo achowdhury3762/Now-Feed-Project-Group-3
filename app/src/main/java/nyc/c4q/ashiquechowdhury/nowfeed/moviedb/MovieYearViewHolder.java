@@ -25,6 +25,9 @@ public class MovieYearViewHolder extends RecyclerView.ViewHolder{
 
     public void bind(MovieDescriptions movieDescriptions) {
         movieDescription.setText(movieDescriptions.getDescription());
+        if( movieDescriptions.getDescription().length() == 0){
+            movieDescription.setText("No Overview Found");
+        }
         Picasso.with(itemView.getContext()).load("http://image.tmdb.org/t/p/w300" + movieDescriptions.getImagePath()).fit().into(movieImage);
     }
 }

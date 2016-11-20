@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".buzzfeed.BuzzActivity">
         </activity>
+        <activity android:name=".workout.ProgressActivity"></activity>
     </application>
 
 </manifest>

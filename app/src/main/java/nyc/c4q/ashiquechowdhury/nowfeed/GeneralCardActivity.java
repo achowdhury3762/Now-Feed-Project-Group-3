@@ -35,6 +35,8 @@ public class GeneralCardActivity extends AppCompatActivity {
         myList.add(new Integer(1));
         myList.add(new String("BuzzFeed"));
         myList.add(new Integer(1));
+        myList.add(false);
+        myList.add(new Integer(1));
 
         mCardsRecyclerView = (RecyclerView) findViewById(R.id.cards_recycler_view);
         mCardsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
