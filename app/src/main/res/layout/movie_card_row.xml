@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/movie_imageView"
-                android:background="@drawable/myborder"
+                android:background="@drawable/grayborder"
                 android:gravity="center"
                 android:text="2011 Movie Popular Hits"
                 android:textSize="30sp"
