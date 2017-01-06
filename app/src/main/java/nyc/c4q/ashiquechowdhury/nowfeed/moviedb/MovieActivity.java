@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +23,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by ashiquechowdhury on 11/13/16.
  */
 public class MovieActivity extends AppCompatActivity {
-    RecyclerView movieRecyclerView;
-    List<MovieDescriptions> myMoviesss;
+    private RecyclerView movieRecyclerView;
+    private List<MovieDescriptions> myMoviesss;
+    private TextView topMovieTView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -34,6 +36,8 @@ public class MovieActivity extends AppCompatActivity {
         movieRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         Intent intent = getIntent();
         String year = intent.getStringExtra(GeneralMovieCardViewHolder.YEAR);
+        topMovieTView = (TextView) findViewById(R.id.top_movie_text);
+        topMovieTView.setText("Top Movies of the Year " + year);
         callMovieRetrofit(year);
     }
 
