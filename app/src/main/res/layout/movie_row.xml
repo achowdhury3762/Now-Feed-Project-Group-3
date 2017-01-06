@@ -21,7 +21,9 @@
                 android:id="@+id/movie_decription_textView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp"
+                android:padding="12dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
                 android:text="sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
                 android:textSize="15sp" />
         </ScrollView>

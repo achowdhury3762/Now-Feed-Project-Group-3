@@ -5,8 +5,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
 import nyc.c4q.ashiquechowdhury.nowfeed.R;
 
 /**
@@ -28,6 +26,5 @@ public class MovieYearViewHolder extends RecyclerView.ViewHolder{
         if( movieDescriptions.getDescription().length() == 0){
             movieDescription.setText("No Overview Found");
         }
-        Picasso.with(itemView.getContext()).load("http://image.tmdb.org/t/p/w300" + movieDescriptions.getImagePath()).fit().into(movieImage);
     }
 }

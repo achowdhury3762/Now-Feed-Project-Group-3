@@ -5,18 +5,29 @@
 
     <TextView
         android:id="@+id/weight"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Weight (lbs)"
         android:layout_margin="10dp"/>
 
+    <Button
+        android:onClick="onClickSubmit"
+        android:text="submit"
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true" />
+
     <EditText
+        android:layout_toLeftOf="@id/submit_button"
         android:id="@+id/weightedittext"
-        android:layout_alignParentRight="true"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/weight"
         android:layout_height="wrap_content" />
 
     <TextView
+        android:textSize="20sp"
         android:id="@+id/date"
         android:layout_below="@id/weight"
         android:layout_width="wrap_content"
@@ -24,12 +35,22 @@
         android:text="Date"
         android:layout_margin="10dp"/>
 
+    <Button
+        android:text="submit"
+        android:id="@+id/submit_button2"
+        android:layout_below="@id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true" />
+
     <EditText
+        android:layout_toRightOf="@id/weight"
         android:id="@+id/dateedittext"
-        android:layout_alignParentRight="true"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@id/submit_button2"
         android:layout_height="wrap_content"
         android:layout_below="@+id/weightedittext" />
+
 
     <TextView
         android:id="@+id/progressphoto"
@@ -41,7 +62,7 @@
 
     <ImageView
         android:id="@+id/camera"
-        android:layout_below="@id/dateedittext"
+        android:layout_below="@id/submit_button2"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/cameraicon"
