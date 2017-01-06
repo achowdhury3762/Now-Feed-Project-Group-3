@@ -32,11 +32,7 @@ public class GeneralCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_general_cards);
         myList = new ArrayList<>();
-        myList.add(new Integer(1));
         myList.add(new String("BuzzFeed"));
-        myList.add(new Integer(1));
-        myList.add(false);
-        myList.add(new Integer(1));
 
         mCardsRecyclerView = (RecyclerView) findViewById(R.id.cards_recycler_view);
         mCardsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
