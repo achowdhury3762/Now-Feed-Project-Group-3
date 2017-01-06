@@ -2,28 +2,30 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="350dp"
-    xmlns:cardview="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    app:cardCornerRadius="20dp">
+    android:layout_marginBottom="10dp"
+    android:layout_margin="10dp"
+    app:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:orientation="vertical">
-
-    <ImageView
-        android:layout_gravity="left"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/buzzfeedlogo"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/buzz_card_rview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:background="@drawable/myborder"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:src="@drawable/buzzlogo"/>
+    </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/buzz_card_rview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
 </android.support.v7.widget.CardView>
